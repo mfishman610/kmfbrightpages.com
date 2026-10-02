@@ -10,15 +10,24 @@
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <header class="page-header" role="banner">
-      <h1 class="project-name"><a href="{{ '/' | relative_url }}" style="color:inherit;text-decoration:none">{{ site.title }}</a></h1>
-      <h2 class="project-tagline">{{ page.tagline | default: site.description }}</h2>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="logo" href="{{ '/' | relative_url }}"><svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><line x1="22" y1="13" x2="11" y2="31" stroke="#2a1f4a" stroke-width="2.5"/><line x1="22" y1="13" x2="33" y2="31" stroke="#2a1f4a" stroke-width="2.5"/><circle cx="22" cy="12" r="9" fill="#6d3fd0"/><circle cx="11" cy="32" r="8" fill="#ffc845" stroke="#2a1f4a" stroke-width="2"/><circle cx="33" cy="32" r="8" fill="#c23c80"/></svg><span class="logo-name">{{ site.title }}</span></a>
+        <nav class="site-nav" aria-label="Main">
+          <a href="{{ '/#books' | relative_url }}">Books</a>
+          <a href="{{ '/#how' | relative_url }}">How it works</a>
+          <a href="{{ '/#qr' | relative_url }}">Scanned a code?</a>
+        </nav>
+      </div>
     </header>
-    <main id="content" class="main-content" role="main">
+    <main id="content">
       {{ content }}
-      <footer class="site-footer">
-        <span class="site-footer-credits">&copy; KMF Bright Pages</span>
-      </footer>
     </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>&copy; KMF Bright Pages</span>
+        <span>No cookies, no tracking, no ads &mdash; just books.</span>
+      </div>
+    </footer>
   </body>
 </html>
