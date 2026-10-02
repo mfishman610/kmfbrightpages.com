@@ -1,0 +1,21 @@
+---
+---
+
+$header-bg-color: #6d3fd0;
+$header-bg-color-secondary: #c23c80;
+$section-headings-color: #6d3fd0;
+$body-text-color: #3f4448;
+$body-link-color: #5b2fc0;
+
+@import "{{ site.theme }}";
+
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #fffdf8; }
+.page-header { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.main-content { max-width: 40rem; }
+.main-content h1, .main-content h2 { color: #6d3fd0; }
+a.review-button { display: block; text-align: center; background: #6d3fd0; color: #fff; text-decoration: none;
+  padding: .9rem 1rem; border-radius: .7rem; margin: .8rem 0; font-weight: 700; }
+a.review-button:hover, a.review-button:focus { background: #4f2aa3; color: #fff; text-decoration: none; }
+.note { color: #5d6368; font-size: .9rem; }
+ul.books { padding-left: 1.2rem; }
+ul.books li { margin: .4rem 0; }
