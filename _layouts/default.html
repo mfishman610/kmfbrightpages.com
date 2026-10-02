@@ -3,20 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#6d3fd0">
+    <meta name="theme-color" content="#FFC21A">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+    <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+    <link rel="preload" href="{{ '/assets/fonts/nunito-sans.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="logo" href="{{ '/' | relative_url }}"><svg width="40" height="40" viewBox="0 0 44 44" aria-hidden="true"><line x1="22" y1="13" x2="11" y2="31" stroke="#2a1f4a" stroke-width="2.5"/><line x1="22" y1="13" x2="33" y2="31" stroke="#2a1f4a" stroke-width="2.5"/><circle cx="22" cy="12" r="9" fill="#6d3fd0"/><circle cx="11" cy="32" r="8" fill="#ffc845" stroke="#2a1f4a" stroke-width="2"/><circle cx="33" cy="32" r="8" fill="#c23c80"/></svg><span class="logo-name">{{ site.title }}</span></a>
+        <a class="brand" href="{{ '/' | relative_url }}"><svg class="logo-mark" width="60" height="48" viewBox="0 0 125 100" aria-hidden="true"><g stroke="#FFC21A" stroke-width="4" stroke-linecap="round"><line x1="11.3" y1="17.5" x2="6.1" y2="14.5"/><line x1="23.0" y1="9.3" x2="22.0" y2="3.3"/><line x1="36.9" y1="13.0" x2="40.8" y2="8.4"/><line x1="43.0" y1="26.0" x2="49.0" y2="26.0"/><line x1="36.9" y1="39.0" x2="40.8" y2="43.6"/><line x1="23.0" y1="42.7" x2="22.0" y2="48.7"/><line x1="11.3" y1="34.5" x2="6.1" y2="37.5"/></g><circle cx="26" cy="26" r="13" fill="#FFC21A"/><g fill="none" stroke="#13235B" stroke-width="2.2" stroke-linecap="round"><path d="M20 25q2.5-3 5 0"/><path d="M27 25q2.5-3 5 0"/><path d="M21.5 30q4.5 4.5 9 0"/></g><rect x="48" y="24" width="44" height="58" rx="5" fill="#E8344E" transform="rotate(24 48 82)"/><rect x="48" y="24" width="44" height="58" rx="5" fill="#FF8A1F" transform="rotate(18 48 82)"/><rect x="48" y="24" width="44" height="58" rx="5" fill="#FFC21A" transform="rotate(12 48 82)"/><rect x="48" y="24" width="44" height="58" rx="5" fill="#3FA34D" transform="rotate(6 48 82)"/><rect x="48" y="24" width="44" height="58" rx="5" fill="#1E6FD9" transform="rotate(0 48 82)"/><rect x="48" y="24" width="44" height="58" rx="5" fill="#fff" stroke="#13235B" stroke-width="3" transform="rotate(-7 48 82)"/><path d="M70 66c-6-4-9-7-9-10.5a4.2 4.2 0 0 1 9-1.6 4.2 4.2 0 0 1 9 1.6c0 3.5-3 6.5-9 10.5z" fill="#F26B7F" transform="rotate(-7 48 82)"/></svg><span class="wordmark"><span style="color:#1E6FD9">K</span><span style="color:#3FA34D">M</span><span style="color:#E8344E">F</span> Bright Pages</span></a>
         <nav class="site-nav" aria-label="Main">
-          <a href="{{ '/#books' | relative_url }}">Books</a>
-          <a href="{{ '/#how' | relative_url }}">How it works</a>
-          <a href="{{ '/#qr' | relative_url }}">Scanned a code?</a>
+          <a href="{{ '/#ages' | relative_url }}">Shop by age</a>
+          <a href="{{ '/#series' | relative_url }}">Series</a>
+          <a href="{{ '/books/' | relative_url }}">All books</a>
+          <a href="{{ '/#about' | relative_url }}">About</a>
+          <a class="nav-pill" href="{{ '/#qr' | relative_url }}">Scanned a code?</a>
         </nav>
       </div>
     </header>
@@ -24,9 +30,10 @@
       {{ content }}
     </main>
     <footer class="site-footer">
-      <div class="wrap">
+      {% include footer.html %}
+      <div class="wrap footer-base">
         <span>&copy; KMF Bright Pages</span>
-        <span>No cookies, no tracking, no ads &mdash; just books.</span>
+        <span>No cookies, no tracking, no ads.</span>
       </div>
     </footer>
   </body>
