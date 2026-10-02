@@ -66,6 +66,8 @@ img, svg { max-width: 100%; }
 .cover-sm .cover-series { font-size: .55rem; }
 .cover-sm .cover-title { font-size: 1rem; }
 .cover-sm .cover-tag { display: none; }
+.cover-img { padding: 0; height: auto; object-fit: cover; background: var(--white); }
+.book-meta { font-weight: 700; font-size: .95rem; }
 
 /* home: hero */
 .hero { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: center;
@@ -111,7 +113,7 @@ img, svg { max-width: 100%; }
 /* home: books */
 .books { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 26px; }
 .book-card { background: var(--white); border: 3px solid var(--ink); border-radius: 24px; padding: 26px; display: flex;
-  flex-wrap: wrap; gap: 24px; box-shadow: 0 8px 0 var(--ink); }
+  flex-wrap: wrap; align-items: flex-start; align-content: flex-start; gap: 24px; box-shadow: 0 8px 0 var(--ink); }
 .book-info { flex: 1 1 200px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .book-info h3 { font-size: 1.7rem; }
 .book-info .actions { margin-top: auto; }
